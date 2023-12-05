@@ -1,0 +1,33 @@
+<template>
+  <div>
+   <Navbar></Navbar>
+   <NuxtPage></NuxtPage>
+
+  </div>
+</template>
+
+<script>
+  
+
+    
+
+
+</script>
+
+
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+ 
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+</style>
