@@ -3,8 +3,8 @@
         <div @click.stop class="popup">
             <form @click.prevent>
                 <h4>CONFIRM PURCHASE</h4>
-                <input @input="postBody.name = $event.target.value" :value="postBody.name" type="text" placeholder="Enter your name" :class="{'input-attention': attentionsBlock.isDataEntered}">
-                <input @input="postBody.email = $event.target.value" :value="postBody.email" type="email" placeholder="Enter your email" :class="{'input-attention': attentionsBlock.isDataEntered}" >
+                <MyInput @input="postBody.name = $event.target.value" :value="postBody.name"  placeholder="Enter your name" :class="{'input-attention': attentionsBlock.isDataEntered}"/>
+                <MyInput @input="postBody.email = $event.target.value" :value="postBody.email"  placeholder="Enter your email" :class="{'input-attention': attentionsBlock.isDataEntered}"/>
                 <div>TOTAL: <strong>{{ Math.ceil(total) + '$'}}</strong> </div>
                 <MyButton style="box-shadow: 5px 5px 5px black;" @click="sendCart(postBody)">CONFIRM</MyButton>
                 <AttentionsPopup :attentionBlock="attentionsBlock"></AttentionsPopup>
@@ -98,7 +98,6 @@ async function sendCart(postBody) {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 25px;
     border: 3px solid brown;
     position: relative;
 }
@@ -112,16 +111,6 @@ form {
     
 }
 
-input {
-    padding-left: 10px;
-    width: 300px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: 1px solid black;
-    border-radius: 25px;
-    outline: none;
-    box-shadow: 5px 5px 5px black;
-}
 
 
 .input-attention {
